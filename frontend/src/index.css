@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --color-panpaya-50: #fff8ed;
+  --color-panpaya-100: #ffefd5;
+  --color-panpaya-200: #ffdba8;
+  --color-panpaya-300: #ffc171;
+  --color-panpaya-400: #ffa03a;
+  --color-panpaya-500: #fb8b12;
+  --color-panpaya-600: #e96f08;
+  --color-panpaya-700: #c15509;
+  --color-panpaya-800: #9a430f;
+  --color-panpaya-900: #7c3810;
+
+  --color-ink-50: #f1f5f9;
+  --color-ink-100: #d8e2ee;
+  --color-ink-200: #a9bcd4;
+  --color-ink-300: #6784ab;
+  --color-ink-400: #3f5a85;
+  --color-ink-500: #2b4266;
+  --color-ink-600: #1f304d;
+  --color-ink-700: #17243b;
+  --color-ink-800: #101a2c;
+  --color-ink-900: #0a101d;
+  --color-ink-950: #060a13;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100svh;
+    background-color: var(--color-ink-950);
+    color: var(--color-ink-50);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+
+  ::selection {
+    background-color: rgb(251 139 18 / 0.35);
+    color: #ffffff;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(148 163 184 / 0.28) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(148 163 184 / 0.25);
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    background-clip: content-box;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(251 139 18 / 0.45);
+  }
+}

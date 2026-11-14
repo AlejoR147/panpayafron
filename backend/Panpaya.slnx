@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Panpaya.Api/Panpaya.Api.csproj" />
+    <Project Path="src/Panpaya.Application/Panpaya.Application.csproj" />
+    <Project Path="src/Panpaya.Domain/Panpaya.Domain.csproj" />
+    <Project Path="src/Panpaya.Infrastructure/Panpaya.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Panpaya.Tests.Unit/Panpaya.Tests.Unit.csproj" />
+  </Folder>
+</Solution>

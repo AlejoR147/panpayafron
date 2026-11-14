@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: panpaya-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /api/salud
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: Cors__AllowedOrigins__0
+        value: http://localhost:5173
+        sync: false
+      - key: Cors__AllowedOrigins__1
+        value: http://localhost:3000
+        sync: false

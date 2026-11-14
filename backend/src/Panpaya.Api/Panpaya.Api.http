@@ -1,0 +1,46 @@
+@Panpaya.Api_HostAddress = http://localhost:5299
+
+GET {{Panpaya.Api_HostAddress}}/api/topologia
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/topologia/metricas
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/topologia/nodos
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/topologia/enlaces
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/sedes
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/sedes/bogota
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/inventario
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/inventario/bogota
+Accept: application/json
+
+###
+
+GET {{Panpaya.Api_HostAddress}}/api/salud
+Accept: application/json
+
+###

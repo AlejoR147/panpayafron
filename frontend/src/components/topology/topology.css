@@ -1,0 +1,335 @@
+.topo-lienzo {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(34, 211, 238, 0.05), transparent 62%),
+    linear-gradient(180deg, rgba(6, 10, 19, 0.92), rgba(6, 10, 19, 1));
+}
+
+.topo-lienzo .react-flow__handle {
+  opacity: 0;
+}
+
+.topo-lienzo .react-flow__node {
+  cursor: pointer;
+}
+
+.topo-lienzo .react-flow__edge-path,
+.topo-lienzo .react-flow__edge-interaction {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topo-lienzo .react-flow__edge-text {
+  font-family: var(--font-mono);
+}
+
+.topo-lienzo .react-flow__controls {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.topo-lienzo .react-flow__controls-button {
+  background: rgba(15, 23, 42, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  fill: #cbd5e1;
+}
+
+.topo-lienzo .react-flow__controls-button:hover {
+  background: rgba(30, 41, 59, 0.96);
+}
+
+.topo-lienzo .react-flow__controls-button svg {
+  fill: #cbd5e1;
+}
+
+.topo-lienzo .react-flow__minimap {
+  background-color: rgba(6, 10, 19, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.topo-lienzo .react-flow__attribution {
+  background: transparent;
+  color: rgba(148, 163, 184, 0.55);
+}
+
+.topo-lienzo .react-flow__attribution a {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+.topo-nodo {
+  position: relative;
+  user-select: none;
+}
+
+.topo-nodo__halo {
+  position: absolute;
+  inset: -4px;
+  z-index: 0;
+  background-color: transparent;
+  transition: background-color 0.18s ease;
+}
+
+.topo-nodo__cara {
+  position: absolute;
+  inset: 2px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.97), rgba(8, 13, 25, 0.97));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: opacity 0.18s ease, filter 0.18s ease;
+}
+
+.topo-nodo--isp .topo-nodo__cara {
+  border: 1.5px dashed rgba(34, 211, 238, 0.75);
+  background: linear-gradient(180deg, rgba(8, 47, 73, 0.75), rgba(6, 18, 32, 0.85));
+}
+
+.topo-nodo__contenido {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+}
+
+.topo-nodo__insignia {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #08111f;
+}
+
+.topo-nodo__icono {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.4;
+}
+
+.topo-nodo__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.topo-nodo__nombre {
+  margin: 0;
+  overflow: hidden;
+  font-size: 11.5px;
+  font-weight: 650;
+  line-height: 1.25;
+  color: #f8fafc;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topo-nodo__ip {
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  line-height: 1.3;
+  color: rgba(203, 213, 225, 0.85);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topo-nodo__meta {
+  margin: 0;
+  overflow: hidden;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.topo-nodo--caido .topo-nodo__cara {
+  opacity: 0.55;
+  filter: saturate(0.35);
+}
+
+.topo-nodo--caido .topo-nodo__halo {
+  background-color: rgba(244, 63, 94, 0.9);
+}
+
+.topo-nodo--sede .topo-nodo__halo {
+  background-color: rgba(56, 189, 248, 0.85);
+}
+
+.topo-nodo--sel .topo-nodo__halo {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.topo-nodo--ruta .topo-nodo__halo {
+  background-color: rgba(251, 191, 36, 0.95);
+}
+
+.topo-nodo--paso .topo-nodo__halo {
+  background-color: #fde047;
+  animation: topo-pulso 1.1s ease-in-out infinite;
+}
+
+@keyframes topo-pulso {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.wan-nodo {
+  position: relative;
+}
+
+.wan-nodo__caja {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(8, 13, 25, 0.98));
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.wan-nodo--principal .wan-nodo__caja {
+  border-color: rgba(251, 191, 36, 0.55);
+}
+
+.wan-nodo--wan .wan-nodo__caja {
+  border-color: rgba(34, 211, 238, 0.55);
+  background: linear-gradient(180deg, rgba(8, 47, 73, 0.9), rgba(6, 18, 32, 0.95));
+}
+
+.wan-nodo--sin-datos .wan-nodo__caja {
+  border-style: dashed;
+  opacity: 0.72;
+}
+
+.wan-nodo--sede .wan-nodo__caja {
+  border-color: rgba(56, 189, 248, 0.65);
+}
+
+.wan-nodo--sel .wan-nodo__caja {
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.16);
+}
+
+.wan-nodo--ruta .wan-nodo__caja {
+  border-color: rgba(251, 191, 36, 0.8);
+}
+
+.wan-nodo--paso .wan-nodo__caja {
+  animation: wan-pulso 1.1s ease-in-out infinite;
+}
+
+@keyframes wan-pulso {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 224, 71, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(253, 224, 71, 0.28);
+  }
+}
+
+.wan-nodo__icono {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.14);
+  color: #7dd3fc;
+}
+
+.wan-nodo--principal .wan-nodo__icono {
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(251, 191, 36, 0.16);
+  color: #fbbf24;
+}
+
+.wan-nodo--wan .wan-nodo__icono {
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.14);
+  color: #22d3ee;
+}
+
+.wan-nodo__icono-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.wan-nodo__texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.wan-nodo__nombre {
+  margin: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f8fafc;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wan-nodo__subnet {
+  margin: 3px 0 0;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #60a5fa;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wan-nodo__badge {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fbbf24;
+}
+
+.wan-nodo__servidores {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 28px;
+  transform: translateX(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: #1e293b;
+  color: #a78bfa;
+}
+
+.wan-nodo__servidor-svg {
+  width: 18px;
+  height: 18px;
+}
