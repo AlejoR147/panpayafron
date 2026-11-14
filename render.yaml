@@ -11,8 +11,6 @@ services:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
       - key: Cors__AllowedOrigins__0
-        value: http://localhost:5173
-        sync: false
+        value: https://panpaya.netlify.app
       - key: Cors__AllowedOrigins__1
-        value: http://localhost:3000
-        sync: false
+        value: http://localhost:5173

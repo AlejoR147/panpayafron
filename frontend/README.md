@@ -35,5 +35,5 @@ See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rule
 
 En producción no existe el proxy de Vite (`/api`), por lo que las llamadas se resuelven contra `VITE_API_URL` (leída en `src/api/client.ts`). **Sin `VITE_API_URL` definido, las llamadas a la API fallan en producción.**
 
-- **Render (backend):** configurar los orígenes permitidos de CORS con las variables `Cors__AllowedOrigins__0` (dominio de Netlify) y `Cors__AllowedOrigins__1` (`http://localhost:5173` para desarrollo local).
-- **Netlify (frontend):** definir la variable de entorno `VITE_API_URL` apuntando a la API de Render (ver `.env.production.example`). El build usa `netlify.toml` en la raíz del repositorio (`base = frontend`, Node 22, redirect SPA `/* -> /index.html` 200).
+- **Render (backend):** `Cors__AllowedOrigins__0=https://panpaya.netlify.app` y `Cors__AllowedOrigins__1=http://localhost:5173`.
+- **Netlify (frontend):** `VITE_API_URL=https://panpayafron.onrender.com`. El build usa `netlify.toml` en la raíz del repositorio (`base = frontend`, Node 22, redirect SPA `/* -> /index.html` 200).
