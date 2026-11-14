@@ -539,16 +539,16 @@
     { "id": "lan-bog-srvsw-srv", "origenId": "sw-bog-srv", "destinoId": "srv-bog-erp-01", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
     { "id": "lan-cal-core-rtr", "origenId": "rtr-cal", "destinoId": "sw-cal-core", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
     { "id": "lan-cal-core-p1", "origenId": "sw-cal-core", "destinoId": "sw-cal-p1", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
-    { "id": "wan-bog-med", "origenId": "rtr-bog", "destinoId": "rtr-med", "tipo": "Wan", "capacidadMbps": 100, "metricaRip": 1, "estado": "Activo", "latenciaMs": 18 },
-    { "id": "wan-bog-cal", "origenId": "rtr-bog", "destinoId": "rtr-cal", "tipo": "Wan", "capacidadMbps": 100, "metricaRip": 1, "estado": "Activo", "latenciaMs": 20 },
-    { "id": "wan-med-cal-backup", "origenId": "rtr-med", "destinoId": "rtr-cal", "tipo": "Respaldo", "capacidadMbps": 50, "metricaRip": 1, "estado": "Activo", "latenciaMs": 30 },
+    { "id": "wan-bog-med", "origenId": "rtr-bog", "destinoId": "rtr-med", "tipo": "Wan", "capacidadMbps": 200, "metricaRip": 1, "estado": "Activo", "latenciaMs": 18 },
+    { "id": "wan-bog-cal", "origenId": "rtr-bog", "destinoId": "rtr-cal", "tipo": "Wan", "capacidadMbps": 200, "metricaRip": 1, "estado": "Activo", "latenciaMs": 20 },
+    { "id": "wan-med-cal-backup", "origenId": "rtr-med", "destinoId": "rtr-cal", "tipo": "Respaldo", "capacidadMbps": 150, "metricaRip": 1, "estado": "Activo", "latenciaMs": 30 },
     { "id": "lan-baq-p1-pc", "origenId": "pc-baq-admin-01", "destinoId": "sw-baq-p1", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
     { "id": "lan-baq-p1-core", "origenId": "sw-baq-p1", "destinoId": "sw-baq-core", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
     { "id": "lan-baq-core-rtr", "origenId": "sw-baq-core", "destinoId": "rtr-baq", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
-    { "id": "wan-bog-baq", "origenId": "rtr-bog", "destinoId": "rtr-baq", "tipo": "Wan", "capacidadMbps": 100, "metricaRip": 1, "estado": "Activo", "latenciaMs": 22, "protocoloRouting": "Estatica" },
+    { "id": "wan-bog-baq", "origenId": "rtr-bog", "destinoId": "rtr-baq", "tipo": "Wan", "capacidadMbps": 150, "metricaRip": 1, "estado": "Activo", "latenciaMs": 22, "protocoloRouting": "Estatica" },
     { "id": "lan-buc-p1-pc", "origenId": "pc-buc-admin-01", "destinoId": "sw-buc-p1", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
     { "id": "lan-buc-p1-core", "origenId": "sw-buc-p1", "destinoId": "sw-buc-core", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
     { "id": "lan-buc-core-rtr", "origenId": "sw-buc-core", "destinoId": "rtr-buc", "tipo": "Lan", "capacidadMbps": 1000, "metricaRip": 1, "estado": "Activo", "latenciaMs": 1 },
-    { "id": "wan-bog-buc", "origenId": "rtr-bog", "destinoId": "rtr-buc", "tipo": "Wan", "capacidadMbps": 100, "metricaRip": 1, "estado": "Activo", "latenciaMs": 16, "protocoloRouting": "Estatica" }
+    { "id": "wan-bog-buc", "origenId": "rtr-bog", "destinoId": "rtr-buc", "tipo": "Wan", "capacidadMbps": 150, "metricaRip": 1, "estado": "Activo", "latenciaMs": 16, "protocoloRouting": "Estatica" }
   ]
 }
